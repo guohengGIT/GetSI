@@ -16,7 +16,7 @@
 		<mkdir dir="${classes.dir}/lib" />
 	</target>
 	<target name="compile" depends="init">
-		<javac target="1.6" srcdir="${src.dir}" destdir="${classes.dir}">
+		<javac target="1.8" srcdir="${src.dir}" destdir="${classes.dir}">
 			<compilerarg line="-encoding UTF-8" />
 			<classpath refid="lib-classpath"></classpath>
 		</javac>
