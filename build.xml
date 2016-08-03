@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="GetSI" basedir="." default="compile">
+	<property name="src.dir" value="src" />
+	<property name="build.dir" value="build" />
+	<property name="classes.dir" value="${build.dir}/classes" />
+	<property name="jar.dir" value="${build.dir}/jar" />
+	<property name="lib.dir" value="WebContent/WEB-INF/lib" />
+	<property name="main-class" value="Test.Test" />
+	<path id="lib-classpath">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar"></include>
+		</fileset>
+	</path>
+	<target name="init">
+		<mkdir dir="${classes.dir}" />
+		<mkdir dir="${classes.dir}/lib" />
+	</target>
+	<target name="compile" depends="init">
+		<javac target="1.6" srcdir="${src.dir}" destdir="${classes.dir}">
+			<compilerarg line="-encoding UTF-8" />
+			<classpath refid="lib-classpath"></classpath>
+		</javac>
+		<copy todir="${classes.dir}/lib">
+			<fileset dir="${lib.dir}" />
+		</copy>
+	</target>
+	<target name="war" depends="compile">
+		<war destfile="${build.dir}/GetSI.war" webxml="WebContent/WEB-INF/web.xml">
+			<fileset dir="WebContent" >
+			    <include name="**/*.jsp" />
+			 </fileset>
+			<lib dir="${lib.dir}" />
+			<classes dir="${classes.dir}"/>
+		</war>
+	</target>
+</project>
