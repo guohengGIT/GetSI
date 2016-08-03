@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="GetSI" basedir="." default="compile">
+<project name="GetSI" basedir="." default="war">
 	<property name="src.dir" value="src" />
 	<property name="build.dir" value="build" />
 	<property name="classes.dir" value="${build.dir}/classes" />
 	<property name="jar.dir" value="${build.dir}/jar" />
 	<property name="lib.dir" value="WebContent/WEB-INF/lib" />
-	<property name="main-class" value="Test.Test" />
+	<!-- <property name="main-class" value="Test.Test" /> -->
 	<path id="lib-classpath">
 		<fileset dir="${lib.dir}">
 			<include name="**/*.jar"></include>
@@ -19,7 +19,7 @@
 		<copy todir="${classes.dir}/lib">
 			<fileset dir="${lib.dir}" />
 		</copy>
-		<javac target="1.8" srcdir="${src.dir}" destdir="${classes.dir}">
+		<javac target="1.8" srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="true">
 			<compilerarg line="-encoding UTF-8" />
 			<classpath refid="lib-classpath"></classpath>
 		</javac>
