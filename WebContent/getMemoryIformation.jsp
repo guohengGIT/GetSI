@@ -11,7 +11,7 @@
 <div style="width:99%; height:45px; border: 1px solid #000000;background:#000000;border-radius:0.5em;color:#DEE6CE; text-align:left;padding-top:13px;padding-left:23px;padding-right:10px;font-size:25px;margin-top:-10px;margin-left:-10px;">Memory Information</div><br><br>
 <center>
 	<h3>Memory Detail Information</h3><br>
-	<form action="getMemoryServlet">
+	<form action="getMemoryServlet" method="post">
 		<table border="1" style="background-color:#F4F3F6">
 			<tr>
 				<th height="35px">Memory Total</th>
