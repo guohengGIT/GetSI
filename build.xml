@@ -16,13 +16,14 @@
 		<mkdir dir="${classes.dir}/lib" />
 	</target>
 	<target name="compile" depends="init">
+		<copy todir="${classes.dir}/lib">
+			<fileset dir="${lib.dir}" />
+		</copy>
 		<javac target="1.8" srcdir="${src.dir}" destdir="${classes.dir}">
 			<compilerarg line="-encoding UTF-8" />
 			<classpath refid="lib-classpath"></classpath>
 		</javac>
-		<copy todir="${classes.dir}/lib">
-			<fileset dir="${lib.dir}" />
-		</copy>
+		
 	</target>
 	<target name="war" depends="compile">
 		<war destfile="${build.dir}/GetSI.war" webxml="WebContent/WEB-INF/web.xml">
