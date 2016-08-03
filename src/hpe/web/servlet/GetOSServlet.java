@@ -27,12 +27,12 @@ public class GetOSServlet extends HttpServlet {
 		
 //		System.out.println(request.getHeaderNames());
 //		System.out.println(request.getUserPrincipal());
-		System.out.println(request.getLocalName());
-		System.out.println(request.getRemoteAddr());
-		System.out.println(request.getRemoteHost());
-		System.out.println(request.getRemoteUser());
-		System.out.println(request.getServerName());
-		System.out.println(request.getReader());
+//		System.out.println(request.getLocalName());
+//		System.out.println(request.getRemoteAddr());
+//		System.out.println(request.getRemoteHost());
+//		System.out.println(request.getRemoteUser());
+//		System.out.println(request.getServerName());
+//		System.out.println(request.getReader());
 	
 	}
 
