@@ -15,7 +15,7 @@
 	<h3>CPU Detail Information</h3><br>
 	<form action="getCPUServlet" method="post">
 	
-		 
+		
 		<table border="1" style="background-color:#F4F3F6">
 			<tr>
 				<th width="80px" height="35px">CPU Total</th>

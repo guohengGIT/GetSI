@@ -23,6 +23,7 @@ public class GetOSServlet extends HttpServlet {
 		GetOSService gService = new GetOSService();
 		OSIformation osIformation = gService.os();
 		request.setAttribute("osIformation", osIformation);
+		
 		request.getRequestDispatcher("getOSInformation.jsp").forward(request, response);
 		
 //		System.out.println(request.getHeaderNames());
